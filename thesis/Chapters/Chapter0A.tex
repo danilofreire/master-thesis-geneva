@@ -1,0 +1,146 @@
+% Appendix A
+
+\chapter{Appendix}
+\label{sec:appendix}
+
+%-----------------------------------------------------------------------------------\
+
+\noindent
+1) R code for \autoref{fig:fig2}.
+
+{\footnotesize
+\begin{verbatim}
+# Create the data set
+# Sources: http://bit.ly/1rImlPE and http://bit.ly/1ixhY8z
+
+years <- seq(2000,2013)
+inmates.brazil <- c(232755, 233859, 239345, 308304, 336358, 361402,
+                    401236, 422373, 451429, 473626, 496251, 514582,
+                    548003, 574023)
+inmates.saopaulo <- c(92186, 98822, 109535, 123932, 131764, 138116,
+                      144430, 149310, 154696,163915, 170916, 180059,
+                      190818, 203681)
+df <- data.frame(years, inmates.brazil, inmates.saopaulo)
+
+# Plot the graph
+
+require("ggplot2")
+require("scales")
+
+ggplot(df) + geom_line(aes(years, inmates.brazil), lty = 1) + 
+  geom_point(aes(years, inmates.brazil), size = 2) +  
+  geom_line(aes(years, inmates.saopaulo), lty = 2) +
+  geom_point(aes(years, inmates.saopaulo), size = 2) + 
+  scale_x_continuous("Years", breaks=c(2000,2003,2006,2009,2012)) +
+  scale_y_continuous("Number of Inmates", labels = comma) +
+  annotate("text", 2010.5, 460000, label = "Brazil") +
+  annotate("text", 2010.5, 130000, label = "Sao Paulo") +
+  theme_minimal()
+\end{verbatim}
+}
+
+\newpage
+
+\noindent
+2) R code for \autoref{fig:fig3}.
+
+{\footnotesize
+\begin{verbatim}
+# Create the data set
+# Source: http://bit.ly/Sg7qjB
+
+year <- seq(2000, 2007)
+homicides <- c(5979, 5990, 5435, 5016, 3846, 2784, 2312, 1311)
+df <- data.frame(year, homicides)
+
+# Plot the graph
+
+require("ggplot2")
+
+ggplot(df) + geom_point(aes(year, homicides), size = 2) + 
+  geom_line(aes(year, homicides), lty = 1) +
+  xlab("Year") + ylab("Homicides") + theme_minimal()
+\end{verbatim}
+}
+
+\noindent
+3) R code for \autoref{fig:fig5}
+
+{\footnotesize
+\begin{verbatim}
+# Create the data set
+# Source: Dias (2011, 147)
+
+years <- seq(1990,2010)
+inmates.deaths <- c(5, 10, 12, 19, 13, 11, 41, 36, 29, 80,
+                    102, 89, 63, 18, 10, 13, 22, 5, 7, 2, 4)
+
+df <- data.frame(years, inmates.deaths)
+
+# Plot the graph
+
+require("ggplot2")
+
+ggplot(df) + geom_point(aes(years, inmates.deaths), size = 2) + 
+  geom_line(aes(years, inmates.deaths), lty = 1) +
+  xlab("Years") +
+  ylab("Inmates Killed in Prison") +
+  theme_minimal()
+\end{verbatim}
+}
+
+\newpage
+
+\noindent
+4) R code for \autoref{fig:fig7}
+
+{\footnotesize
+\begin{verbatim}
+# Create the data set
+# Source: Dias (2011, 76)
+
+years <- seq(1994,2009)
+kidnappings <- c(70, 63, 61, 98, 110, 135, 150, 316,
+                 306, 199, 91, 94, 88, 71, 39, 61)
+df <- data.frame(years, kidnappings)
+
+# Plot the graph
+
+require("ggplot2")
+require("scales")
+
+ggplot(df) + geom_line(aes(years, kidnappings), lty = 1) +
+  geom_point(aes(years, kidnappings), size = 2) +
+  scale_y_continuous("Kidnappings", breaks=c(100, 200, 300)) + 
+  scale_x_continuous("Years", breaks=c(1994, 1999, 2004, 2009)) +
+  theme_minimal()
+
+\end{verbatim}
+}
+
+\noindent
+5) R code for \autoref{fig:fig8}
+
+{\footnotesize
+\begin{verbatim}
+# Create the data set
+# Source: Dias (2011, 76)
+
+years <- seq(1994,2009)
+drug.trafficking <- c(1564, 1804, 2027, 2233, 2614, 2573, 2154, 2491,
+                      3300, 3924, 4361, 5415, 6250, 7931, 9490, 9521)
+df <- data.frame(years, drug.trafficking)
+
+# Plot the graph
+
+require("ggplot2")
+require("scales")
+
+ggplot(df) + geom_line(aes(years, drug.trafficking), lty = 1) + 
+  geom_point(aes(years, drug.trafficking), size = 2) +  
+  scale_y_continuous("Drug Trafficking Arrests", breaks=c(3000, 6000, 9000)) + 
+  scale_x_continuous("Years", breaks=c(1994, 1999, 2004, 2009)) +
+  theme_minimal()
+
+\end{verbatim}
+}
