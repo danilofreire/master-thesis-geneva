@@ -11,4 +11,4 @@ Keywords: Organised Crime, Prison Gangs, PCC, São Paulo, Game Theory
 
 ---
 
-The thesis was written on [ShareLaTeX](http://www.sharelatex.com) using the `classicthesis` package by [André Miede](http://www.miede.de/index.php?page=classicthesis), and is licensed as [CC BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/us/).
+The thesis was written on [ShareLaTeX](http://www.sharelatex.com) using the `classicthesis` package by [André Miede](http://www.miede.de/#classicthesis). It is licensed as [CC BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/us/).
